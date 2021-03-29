@@ -65,3 +65,5 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 # farming_assistant_web_service
 # farming_assitant_web_service
 # farming_assistant_web_service
+# web_page
+# F_A_W_S
