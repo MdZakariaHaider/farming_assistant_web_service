@@ -19,6 +19,8 @@ class CreateFarmersTable extends Migration
             $table->string('address',255);
             $table->integer('contacts');
             $table->double('landArea');
+            $table->double('nid');
+            $table->string('crop');
             $table->timestamps();
         });
     }

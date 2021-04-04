@@ -10,7 +10,7 @@ class agentController extends Controller
 {
     public function agent(){
         $agents=agent::all();
-        $title='agent';
+        $title='Agents';
         return view('backend.content.agent',compact('agents','title'));
     }
     public function create(Request $request){
@@ -22,5 +22,11 @@ class agentController extends Controller
             'mobileNo'=>$request->mobileNo
         ]);
         return redirect()->back();
+    }
+    //delete method
+    public function delete($id){
+        $agent=Agent::find($id);
+        $agent->delete();
+        return redirect()->route('agent');
     }
 }

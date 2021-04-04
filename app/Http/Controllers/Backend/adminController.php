@@ -9,6 +9,6 @@ class adminController extends Controller
 {
     public function admin (){
         $title='Admin';
-        return view('backend.content.admin', compact('title'));
+        return view('backend.content.admin',compact('title'));
     }
 }

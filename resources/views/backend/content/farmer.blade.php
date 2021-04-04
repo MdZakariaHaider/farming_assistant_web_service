@@ -16,7 +16,7 @@
           <h5 class="modal-title" id="exampleModalLabel">Farmer</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <form method="post" action="{{route('farmer.create')}}">
+        <form method="post" action="{{route('farmer.create')}}" >
             @csrf
         <div class="modal-body">
 
@@ -36,6 +36,14 @@
                   <div class="mb-3">
                     <label  class="form-label"> Land area</label>
                     <input type="number" name="landArea" class="form-control" placeholder="give area">
+                  </div>
+                  <div class="mb-3">
+                    <label  class="form-label"> NidNo</label>
+                    <input type="number" name="nid" class="form-control" placeholder="give area">
+                  </div>
+                  <div class="mb-3">
+                    <label  class="form-label"> Crops</label>
+                    <input type="text" name="crop" class="form-control" placeholder="give area">
                   </div>
 
 
@@ -59,17 +67,28 @@
         <th scope="col">Address</th>
         <th scope="col">Contacts</th>
         <th scope="col">Land Area</th>
+        <th scope="col">Nid No</th>
+        <th scope="col">Crops</th>
+        <th scope="col">Action</th>
 
       </tr>
     </thead>
     <tbody>
-        @foreach ($farmer as $data )
+        @foreach ($farmer as $key=>$data )
       <tr>
-        <th scope="row">1</th>
+        <th scope="row">{{$key+1}}</th>
         <td>{{$data->name }}</td>
         <td>{{$data->address}}</td>
         <td>{{$data->contacts}}</td>
         <td>{{$data->landArea}}</td>
+        <td>{{$data->nid}}</td>
+        <td>{{$data->crop}}</td>
+
+        <td>
+            <a class="btn btn-primary" href="#">View</a>
+            <a class="btn btn-danger" href={{route('farmer.delete',$data['id'])}}>Delete</a>
+            <a class="btn btn-warning" href="#">Edit</a>
+        </td>
 
       </tr>
       @endforeach

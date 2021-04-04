@@ -12,6 +12,7 @@
         <th scope="col">Name</th>
         <th scope="col">Address</th>
         <th scope="col">Contacts</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
@@ -19,14 +20,19 @@
 
 
         <tbody>
-            @foreach ($categories as $data )
+            @foreach ($categories as $key=>$data )
 
 
           <tr>
-            <th scope="row">1</th>
+            <th scope="row">{{$key+1}}</th>
             <td>{{$data->name}}</td>
             <td>{{$data->address}}</td>
             <td>{{$data->contacts}}</td>
+            <td>
+                <a class="btn btn-primary" href="#">View</a>
+                <a class="btn btn-danger" href={{route('retailer.delete',$data['id'])}}>Delete</a>
+                <a class="btn btn-warning" href="#">Edit</a>
+            </td>
           </tr>
           @endforeach
 

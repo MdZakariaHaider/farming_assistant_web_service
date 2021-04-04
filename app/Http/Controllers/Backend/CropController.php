@@ -10,7 +10,7 @@ class CropController extends Controller
 {
     public function Crop(){
         $crops=Crop::all();
-        $title='crop';
+        $title='Crops';
         return view('backend.content.crop',compact('crops','title'));
 }
 
@@ -23,6 +23,11 @@ public function create(Request $request){
     ]);
     return redirect()->back();
 }
-
+//delete method
+public function delete($id){
+    $crop=crop::find($id);
+    $crop->delete();
+    return redirect()->route('crop');
+}
 
 }

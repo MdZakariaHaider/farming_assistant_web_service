@@ -13,18 +13,24 @@
         <th scope="col">Description</th>
         <th scope="col">Quantity</th>
         <th scope="col">Availability</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
-            @foreach ($crops as $data )
+            @foreach ($crops as $key=>$data )
 
 
           <tr >
-            <th scope="row">1</th>
+            <th scope="row">{{$key+1}}</th>
             <td>{{$data->name}}</td>
             <td>{{$data->description}}</td>
             <td>{{$data->quantity}}</td>
             <td>{{$data->availability}}</td>
+            <td>
+                <a class="btn btn-primary" href="#">View</a>
+                <a class="btn btn-danger" href={{route('crop.delete',$data['id'])}}>Delete</a>
+                <a class="btn btn-warning" href="#">Edit</a>
+            </td>
           </tr>
           @endforeach
 

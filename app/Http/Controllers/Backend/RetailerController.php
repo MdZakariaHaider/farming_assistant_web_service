@@ -10,7 +10,7 @@ class retailerController extends Controller
 {
     public function retailer(){
         $categories=Retailer::all();
-        $title='retailer';
+        $title='Retailers';
         return view('backend.content.retailers',compact('categories','title'));
     }
     public function create(Request $request){
@@ -21,4 +21,10 @@ class retailerController extends Controller
         ]);
         return redirect()->back();
     }
+    //delete method
+public function delete($id){
+    $retailer=retailer::find($id);
+    $retailer->delete();
+    return redirect()->route('retailer');
+}
 }

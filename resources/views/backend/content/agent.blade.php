@@ -13,17 +13,24 @@
         <th scope="col">Name</th>
         <th scope="col">Address</th>
         <th scope="col">Mobile Number</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
 
 
-            @foreach ($agents as $data )
+            @foreach ($agents as $key=>$data )
           <tr>
-            <th scope="row">1</th>
+            <th scope="row">{{$key+1}}</th>
             <td>{{$data->name}}</td>
             <td>{{$data->address}}</td>
             <td>{{$data->mobileNo}}</td>
+
+            <td>
+                <a class="btn btn-primary" href="#">View</a>
+                <a class="btn btn-danger" href={{route('agent.delete',$data['id'])}}>Delete</a>
+                <a class="btn btn-warning" href="#">Edit</a>
+            </td>
           </tr>
           @endforeach
 

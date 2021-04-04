@@ -16,7 +16,7 @@
           <h5 class="modal-title" id="exampleModalLabel">Product</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <form method="post" action="{{route('product.create')}}">
+        <form method="post" action="{{route('product.create')}}" enctype="multipart/form-data">
             @csrf
         <div class="modal-body">
 
@@ -39,7 +39,7 @@
                   </div>
                   <div class="mb-3">
                     <label  class="form-label"> Image</label>
-                    <input type="file" name="image" class="form-control">
+                    <input type="file"name="image" class="form-control">
                   </div>
 
 
@@ -63,17 +63,25 @@
         <th scope="col">Price</th>
         <th scope="col">Description</th>
         <th scope="col">Image</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
-        @foreach ($Product as $data )
+        @foreach ($Product as $key=>$data )
       <tr>
-        <th scope="row">1</th>
+        <th scope="row">{{$key+1}}</th>
         <td>{{$data->name }}</td>
         <td>{{$data->availableStock}}</td>
         <td>{{$data->price}}</td>
         <td>{{$data->description}}</td>
-        <td>{{$data->image}}</td>
+        <td>
+            <img style="width:100px;" src="{{url('files/photo/'.$data->image)}}"alt="">
+        </td>
+        <td>
+            <a class="btn btn-primary" href="#">View</a>
+            <a class="btn btn-danger" href={{route('product.delete',$data['id'])}}>Delete</a>
+            <a class="btn btn-warning" href="#">Edit</a>
+        </td>
       </tr>
       @endforeach
 
