@@ -9,7 +9,7 @@ use App\Models\Retailer;
 class retailerController extends Controller
 {
     public function retailer(){
-        $categories=Retailer::all();
+        $categories=Retailer::paginate(5);
         $title='Retailers';
         return view('backend.content.retailers',compact('categories','title'));
     }
@@ -19,12 +19,12 @@ class retailerController extends Controller
             'address'=>$request->address,
             'contacts'=>$request->contacts,
         ]);
-        return redirect()->back();
+        return redirect()->back()->with('success','Retailer Created Successfully.');
     }
     //delete method
 public function delete($id){
     $retailer=retailer::find($id);
     $retailer->delete();
-    return redirect()->route('retailer');
+    return redirect()->back()->with('success','Retailer Deleted Successfully.');
 }
 }

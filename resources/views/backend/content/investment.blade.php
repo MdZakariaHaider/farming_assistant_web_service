@@ -60,7 +60,7 @@
   </div>
   <table class="table">
     <thead>
-      <tr>
+      <tr class="fw-bolder" style="color:black">
         <th scope="col">#</th>
         <th scope="col">Farmer Name</th>
         <th scope="col">Land Area</th>
@@ -72,7 +72,7 @@
     </thead>
     <tbody>
         @foreach ($investment as $key=>$data )
-      <tr>
+      <tr class='fw-bolder style="color:black'>
         <th scope="row">{{$key+1}}</th>
         <td>{{$data->farmer->name}}</td>
         <td>{{$data->land}}</td>

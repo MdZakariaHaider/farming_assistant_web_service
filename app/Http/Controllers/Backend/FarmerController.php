@@ -9,7 +9,7 @@ use App\Models\farmer;
 class FarmerController extends Controller
 {
    public function farmer(){
-       $farmer=farmer::all();
+       $farmer=farmer::paginate(5);
        $title='Farmers';
        return view('backend.content.farmer',compact('farmer','title'));
    }
@@ -22,13 +22,13 @@ class FarmerController extends Controller
         'nid'=>$request->nid,
         'crop'=>$request->crop,
     ]);
-    return redirect()->back();
+    return redirect()->back()->with('success','Farmer Created Successfully.');
 }
 //delete method
 public function delete($id){
     $farmer=farmer::find($id);
     $farmer->delete();
-    return redirect()->route('farmer');
+    return redirect()->back()->with('success','Farmer Deleted Successfully.');
 }
 
 }

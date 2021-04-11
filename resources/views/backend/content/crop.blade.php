@@ -5,9 +5,18 @@
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Create Crops List
   </button>
+
+   {{-- for successfull masage --}}
+   @if(session()->has('success'))
+   <div class="alert alert-success">
+       {{session()->get('success')}}
+   </div>
+   @endif
+
+
   <table class="table">
     <thead>
-      <tr >
+      <tr class="fw-bolder" style="color:black">
         <th scope="col">#</th>
         <th scope="col">Name</th>
         <th scope="col">Description</th>
@@ -20,7 +29,7 @@
             @foreach ($crops as $key=>$data )
 
 
-          <tr >
+          <tr class='fw-bolder style="color:black'>
             <th scope="row">{{$key+1}}</th>
             <td>{{$data->name}}</td>
             <td>{{$data->description}}</td>
@@ -81,4 +90,5 @@
       </div>
     </div>
   </div>
+  {{$crops->links()}}
 @endsection

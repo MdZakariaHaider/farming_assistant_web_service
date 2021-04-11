@@ -9,7 +9,7 @@ use App\Models\Crop;
 class CropController extends Controller
 {
     public function Crop(){
-        $crops=Crop::all();
+        $crops=Crop::paginate(5);
         $title='Crops';
         return view('backend.content.crop',compact('crops','title'));
 }
@@ -21,13 +21,13 @@ public function create(Request $request){
         'quantity'=>$request->quantity,
         'availability'=>$request->availability
     ]);
-    return redirect()->back();
+    return redirect()->back()->with('success','Crop Created Successfully.');
 }
 //delete method
 public function delete($id){
     $crop=crop::find($id);
     $crop->delete();
-    return redirect()->route('crop');
+    return redirect()->back()->with('success','Crop Deleted Successfully.');
 }
 
 }

@@ -11,6 +11,7 @@ use  App\Http\Controllers\backend\farmerController;
 use App\Http\Controllers\backend\homeController;
 use App\Http\Controllers\Backend\InvestmentController;
 use App\Http\Controllers\Backend\DashboardController;
+use App\Http\Controllers\backend\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,8 @@ use App\Http\Controllers\Backend\DashboardController;
 
 
 Route::get('/',[homeController::class,'home'])->name('home');
+
+// admin
 Route::get('/admin',[adminController::class,'admin'])->name('admin');
 
 
@@ -66,3 +69,7 @@ Route::get('/investment/delete/{id}',[InvestmentController::class,'delete'])->na
 
 //dashboard
 Route::get('/dashboard',[DashboardController::class,'dashboard'])->name('dashboard');
+
+
+// order
+Route::get('/order',[OrderController::class,'order'])->name('order');

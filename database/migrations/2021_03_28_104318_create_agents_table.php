@@ -18,6 +18,7 @@ class CreateAgentsTable extends Migration
             $table->string('name',50);
             $table->string('address');
             $table->string('mobileNo');
+            $table->string('email');
             $table->timestamps();
         });
     }

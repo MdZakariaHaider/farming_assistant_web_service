@@ -8,7 +8,8 @@ use App\Models\Product;
 class productController extends Controller
 {
     public function product(){
-        $Product = product::all();
+
+        $Product = product::paginate(5);
         $title='Products';
         return view('backend.content.productlist', compact('Product','title'));
 
@@ -50,12 +51,12 @@ class productController extends Controller
             'description'=>$request->description,
             'image'=>$file_name,
         ]);
-        return redirect()->back();
+        return redirect()->back()->with('success','Product Created Successfully.');
     }
     //delete method
 public function delete($id){
     $product=product::find($id);
     $product->delete();
-    return redirect()->route('product');
+    return redirect()->back()->with('success','Product Deleted Successfully.');
 }
 }

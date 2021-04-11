@@ -5,9 +5,18 @@
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Create Retailers list
   </button>
+
+  {{-- for successfull masage --}}
+  @if(session()->has('success'))
+  <div class="alert alert-success">
+      {{session()->get('success')}}
+  </div>
+  @endif
+
+
   <table class="table">
     <thead>
-      <tr>
+      <tr class="fw-bolder" style="color:black">
         <th scope="col">#</th>
         <th scope="col">Name</th>
         <th scope="col">Address</th>
@@ -23,7 +32,7 @@
             @foreach ($categories as $key=>$data )
 
 
-          <tr>
+          <tr class='fw-bolder style="color:black'>
             <th scope="row">{{$key+1}}</th>
             <td>{{$data->name}}</td>
             <td>{{$data->address}}</td>
@@ -80,4 +89,5 @@
       </div>
     </div>
   </div>
+  {{$categories->links()}}
 @endsection

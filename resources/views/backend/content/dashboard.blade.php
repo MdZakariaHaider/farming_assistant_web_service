@@ -27,7 +27,7 @@
         </div>
     </div>
     <div class="col-md-3 ">
-        <div class="card bg-info text-white shadow" style="width: 15rem;height:10rem;">
+        <div class="card bg-dark text-white shadow" style="width: 15rem;height:10rem;">
             <div class="card-body">
                 <h5> <small>Total Products</small> </h5>
                 <h1>50</h1>

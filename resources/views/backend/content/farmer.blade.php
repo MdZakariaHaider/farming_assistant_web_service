@@ -59,9 +59,18 @@
       </div>
     </div>
   </div>
+
+ {{-- for successfull masage --}}
+ @if(session()->has('success'))
+ <div class="alert alert-success">
+     {{session()->get('success')}}
+ </div>
+ @endif
+
+
   <table class="table">
     <thead>
-      <tr>
+      <tr class="fw-bolder" style="color:black">
         <th scope="col">#</th>
         <th scope="col">Name</th>
         <th scope="col">Address</th>
@@ -75,7 +84,7 @@
     </thead>
     <tbody>
         @foreach ($farmer as $key=>$data )
-      <tr>
+      <tr class='fw-bolder style="color:black'>
         <th scope="row">{{$key+1}}</th>
         <td>{{$data->name }}</td>
         <td>{{$data->address}}</td>
@@ -96,5 +105,6 @@
 
     </tbody>
   </table>
+  {{$farmer->links()}}
 @endsection
 

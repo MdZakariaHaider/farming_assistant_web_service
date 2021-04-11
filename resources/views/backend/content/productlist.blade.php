@@ -39,7 +39,7 @@
                   </div>
                   <div class="mb-3">
                     <label  class="form-label"> Image</label>
-                    <input type="file"name="image" class="form-control">
+                    <input  type="file"name="image" class="form-control">
                   </div>
 
 
@@ -54,9 +54,19 @@
       </div>
     </div>
   </div>
-  <table class="table">
+
+  {{-- for successfull masage --}}
+  @if(session()->has('success'))
+  <div class="alert alert-success">
+      {{session()->get('success')}}
+  </div>
+  @endif
+
+
+
+  <table class="table ">
     <thead>
-      <tr>
+      <tr class="fw-bolder" style="color:black">
         <th scope="col">#</th>
         <th scope="col">Name</th>
         <th scope="col">Available stock</th>
@@ -68,14 +78,14 @@
     </thead>
     <tbody>
         @foreach ($Product as $key=>$data )
-      <tr>
+      <tr class='fw-bolder style="color:black'>
         <th scope="row">{{$key+1}}</th>
         <td>{{$data->name }}</td>
         <td>{{$data->availableStock}}</td>
         <td>{{$data->price}}</td>
         <td>{{$data->description}}</td>
         <td>
-            <img style="width:100px;" src="{{url('files/photo/'.$data->image)}}"alt="">
+            <img style="width:120px;" src="{{url('files/photo/'.$data->image)}}"alt="">
         </td>
         <td>
             <a class="btn btn-primary" href="#">View</a>
@@ -88,5 +98,6 @@
 
     </tbody>
   </table>
+  {{$Product->links()}}
 @endsection
 

@@ -6,13 +6,23 @@
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Create Agent List
   </button>
+
+    {{-- for successfull masage --}}
+    @if(session()->has('success'))
+    <div class="alert alert-success">
+        {{session()->get('success')}}
+    </div>
+    @endif
+
+
   <table class="table">
     <thead >
-      <tr>
+      <tr class="fw-bolder" style="color:black">
         <th scope="col">#</th>
         <th scope="col">Name</th>
         <th scope="col">Address</th>
         <th scope="col">Mobile Number</th>
+        <th scope="col">Email</th>
         <th scope="col">Action</th>
       </tr>
     </thead>
@@ -20,11 +30,12 @@
 
 
             @foreach ($agents as $key=>$data )
-          <tr>
+          <tr class='fw-bolder style="color:black'>
             <th scope="row">{{$key+1}}</th>
             <td>{{$data->name}}</td>
             <td>{{$data->address}}</td>
             <td>{{$data->mobileNo}}</td>
+            <td>{{$data->email}}</td>
 
             <td>
                 <a class="btn btn-primary" href="#">View</a>
@@ -55,7 +66,7 @@
 
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Name</label>
-                  <input type="name" class="form-control" name="name" placeholder="write name">
+                  <input type="name" class="form-control" name="name" placeholder="give name">
 
                 </div>
                 <div class="mb-3">
@@ -65,6 +76,10 @@
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Mobile No</label>
                     <input type="string" class="form-control" name="mobileNo" placeholder="give mobile no">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Email</label>
+                    <input type="string" class="form-control" name="email" placeholder="give email">
                   </div>
 
 
@@ -79,4 +94,5 @@
       </div>
     </div>
   </div>
+  {{$agents->links()}}
 @endsection

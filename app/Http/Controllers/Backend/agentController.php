@@ -9,7 +9,7 @@ use App\Models\agent;
 class agentController extends Controller
 {
     public function agent(){
-        $agents=agent::all();
+        $agents=agent::paginate(5);
         $title='Agents';
         return view('backend.content.agent',compact('agents','title'));
     }
@@ -19,14 +19,15 @@ class agentController extends Controller
         agent::create([
             'name'=>$request->name,
             'address'=>$request->address,
-            'mobileNo'=>$request->mobileNo
+            'mobileNo'=>$request->mobileNo,
+            'email'=>$request->email,
         ]);
-        return redirect()->back();
+        return redirect()->back()->with('success','Agent Created Successfully.');
     }
     //delete method
     public function delete($id){
         $agent=Agent::find($id);
         $agent->delete();
-        return redirect()->route('agent');
+        return redirect()->back()->with('success','Agent Deleted Successfully.');
     }
 }
