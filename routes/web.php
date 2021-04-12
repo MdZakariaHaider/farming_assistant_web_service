@@ -12,6 +12,7 @@ use App\Http\Controllers\backend\homeController;
 use App\Http\Controllers\Backend\InvestmentController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\backend\OrderController;
+use App\Http\Controllers\Frontend\HomepageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -73,3 +74,7 @@ Route::get('/dashboard',[DashboardController::class,'dashboard'])->name('dashboa
 
 // order
 Route::get('/order',[OrderController::class,'order'])->name('order');
+
+
+// homepage product
+Route::get('/homepage',[HomepageController::class,'homepage'])->name('homepage');

@@ -85,7 +85,7 @@
         <td>{{$data->price}}</td>
         <td>{{$data->description}}</td>
         <td>
-            <img style="width:120px;" src="{{url('files/photo/'.$data->image)}}"alt="">
+            <img style="width:120px;" src="{{url('files/photo/'.$data->image)}}"alt="Product Image" style="height:80px">
         </td>
         <td>
             <a class="btn btn-primary" href="#">View</a>
