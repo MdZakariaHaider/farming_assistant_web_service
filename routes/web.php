@@ -13,6 +13,7 @@ use App\Http\Controllers\Backend\InvestmentController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\backend\OrderController;
 use App\Http\Controllers\Frontend\HomepageController;
+use App\Http\Controllers\Frontend\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -78,3 +79,7 @@ Route::get('/order',[OrderController::class,'order'])->name('order');
 
 // homepage product
 Route::get('/homepage',[HomepageController::class,'homepage'])->name('homepage');
+Route::get('/login-registration',[UserController::class,'showLoginRegistration'])->name('login.registration.form');
+Route::post('/registration',[UserController::class,'registration'])->name('registration');
+Route::post('/login',[UserController::class,'login'])->name('login');
+Route::get('/logout',[UserController::class,'logout'])->name('logout');
