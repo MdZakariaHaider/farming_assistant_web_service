@@ -44,7 +44,7 @@
 
 
   </head>
-  <body style="background-color:	rgb(191, 191, 191)">
+  <body style="background-color: skyblue">
 
 
 

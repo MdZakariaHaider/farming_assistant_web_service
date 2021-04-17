@@ -5,13 +5,13 @@
       <div class="container">
         <a href="{{route('homepage')}}" class="navbar-brand d-flex align-items-center">
 
-            <strong style="color:blue"> <h2> Farming Assistant Web Service </h2></strong>
+            <strong style="color:blue"><h3>Farming Assistant Web Service </h3></strong>
           </a>
 
 
 
           @auth()
-          <span style="color:white;">{{auth()->user()->name}}</span> <a href="{{route('logout')}}"> Logout</a>
+          <span class="fw-bolder " style="color:blue;"> <h1>{{auth()->user()->name}}</h1></span> <a href="{{route('logout')}}"> Logout</a>
       @else
           <a href="{{route('login.registration.form')}}" style="color: blue" class="fw-bolder">Login/Registration</a>
       @endauth

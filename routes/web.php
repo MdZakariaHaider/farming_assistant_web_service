@@ -14,7 +14,8 @@ use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\backend\OrderController;
 use App\Http\Controllers\Frontend\HomepageController;
 use App\Http\Controllers\Frontend\UserController;
-
+use App\Http\Controllers\Frontend\AdminLoginController;
+use App\Http\Controllers\Backend\UserController as BackendUserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,14 +26,34 @@ use App\Http\Controllers\Frontend\UserController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// homepage product
+Route::get('/homepage',[HomepageController::class,'homepage'])->name('homepage');
+Route::get('/login-registration',[UserController::class,'showLoginRegistration'])->name('login.registration.form');
+Route::post('/registration',[UserController::class,'registration'])->name('registration');
+Route::post('/login',[UserController::class,'login'])->name('login');
+Route::get('/logout',[UserController::class,'logout'])->name('logout');
 
 
+
+
+
+
+
+
+
+
+Route::group(['prefix'=>'admin'],function (){// admin login route
+    Route::get('login',[BackendUserController::class,'loginForm'])->name('admin.login');
+    Route::post('do-login',[BackendUserController::class,'doLogin'])->name('admin.dologin');
+
+
+
+
+Route::group(['middleware'=>'admin-auth'],function (){
 Route::get('/',[homeController::class,'home'])->name('home');
-
 // admin
 Route::get('/admin',[adminController::class,'admin'])->name('admin');
-
-
+Route::get('logout',[BackendUserController::class,'logout'])->name('admin.logout');
 
 //agent
 Route::get('/agent',[agentController::class,'agent'])->name('agent');
@@ -77,9 +98,8 @@ Route::get('/dashboard',[DashboardController::class,'dashboard'])->name('dashboa
 Route::get('/order',[OrderController::class,'order'])->name('order');
 
 
-// homepage product
-Route::get('/homepage',[HomepageController::class,'homepage'])->name('homepage');
-Route::get('/login-registration',[UserController::class,'showLoginRegistration'])->name('login.registration.form');
-Route::post('/registration',[UserController::class,'registration'])->name('registration');
-Route::post('/login',[UserController::class,'login'])->name('login');
-Route::get('/logout',[UserController::class,'logout'])->name('logout');
+
+// admin login
+
+});
+});

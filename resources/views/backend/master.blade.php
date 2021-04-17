@@ -112,6 +112,8 @@
 </head>
 
 <body style="background-image:url('image/bg4.png');background-repeat:no-repeat;background-size:100% 100%; background-attachment: fixed;">
+
+
     @include('backend.partials.header')
 
     <div class="container-fluid">
@@ -121,7 +123,7 @@
 
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1  style="color:white">{{$title}}</h1>
+        <h1  style="color:rgb(13, 17, 236)">{{$title}}</h1>
 
       </div>
 

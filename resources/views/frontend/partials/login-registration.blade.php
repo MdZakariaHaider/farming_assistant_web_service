@@ -23,7 +23,7 @@
     <div class="col-md-6">
 
         <h1>login here</h1>
-        <form action="{{route('login')}}" method="post">
+        <form action="{{route('login')}}" method="post" class="fw-bolder">
             @csrf
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Email address</label>
@@ -40,10 +40,10 @@
     </div>
     <div class="col-md-6">
 
-        <h1>registration here</h1>
-       
+        <h1>Registration here</h1>
 
-        <form action="{{route('registration')}}" method="post">
+
+        <form action="{{route('registration')}}" method="post" class="fw-bolder">
             @csrf
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
