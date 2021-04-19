@@ -111,7 +111,8 @@
     <link href="https://getbootstrap.com/docs/5.0/examples/dashboard/dashboard.css" rel="stylesheet">
 </head>
 
-<body style="background-image:url('image/bg4.png');background-repeat:no-repeat;background-size:100% 100%; background-attachment: fixed;">
+{{-- <body style="background-image:url('{{asset('image/bg4.png')}}');background-repeat:no-repeat;background-size:100% 100%; background-attachment: fixed;"> --}}
+    <body style="background-color: skyblue">
 
 
     @include('backend.partials.header')

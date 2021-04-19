@@ -27,7 +27,7 @@ use App\Http\Controllers\Backend\UserController as BackendUserController;
 |
 */
 // homepage product
-Route::get('/homepage',[HomepageController::class,'homepage'])->name('homepage');
+Route::get('/',[HomepageController::class,'homepage'])->name('homepage');
 Route::get('/login-registration',[UserController::class,'showLoginRegistration'])->name('login.registration.form');
 Route::post('/registration',[UserController::class,'registration'])->name('registration');
 Route::post('/login',[UserController::class,'login'])->name('login');

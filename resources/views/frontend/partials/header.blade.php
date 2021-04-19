@@ -11,7 +11,7 @@
 
 
           @auth()
-          <span class="fw-bolder " style="color:blue;"> <h1>{{auth()->user()->name}}</h1></span> <a href="{{route('logout')}}"> Logout</a>
+          <span class="fw-bolder" style="color:blue;"> <h1>{{auth()->user()->name}}</h1></span> <a href="{{route('logout')}}"> Logout</a>
       @else
           <a href="{{route('login.registration.form')}}" style="color: blue" class="fw-bolder">Login/Registration</a>
       @endauth

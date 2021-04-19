@@ -18,11 +18,12 @@
     <link href="https://getbootstrap.com/docs/5.0/examples/dashboard/dashboard.css" rel="stylesheet">
 </head>
 
-<body style="background-image:url('image/bg4.png');background-repeat:no-repeat;background-size:100% 100%; background-attachment: fixed;">)
-<div class="col-md-6">
+{{-- <body style="background-image:url('image/bg4.png');background-repeat:no-repeat;background-size:100% 100%; background-attachment: fixed;">) --}}
+    <body style="background-color: skyblue">
+<div class="col-md-8">
     <div class="row">
 
-        <div class="col-md-3">
+        <div class="col-md-6">
 
         </div>
         <div class="col-md-6" style="padding:50px; ">
