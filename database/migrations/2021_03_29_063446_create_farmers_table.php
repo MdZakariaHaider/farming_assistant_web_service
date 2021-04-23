@@ -21,6 +21,7 @@ class CreateFarmersTable extends Migration
             $table->double('landArea');
             $table->double('nid');
             $table->string('crop');
+            $table->string('agent_id');
             $table->timestamps();
         });
     }

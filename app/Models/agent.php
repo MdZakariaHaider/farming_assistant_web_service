@@ -10,4 +10,6 @@ class agent extends Model
     use HasFactory;
     protected $guarded=[];
 
+   
+
 }

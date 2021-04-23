@@ -22,7 +22,7 @@
         <div class="modal-body">
 
                 <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">FarmerName</label>
+                  <label for="exampleInputEmail1" class="form-label">Farmer Name</label>
                   <select name="farmer_id" id="" class="form-control">
                       @foreach ($farmers as $data)
 
@@ -33,16 +33,16 @@
 
                 </div>
                 <div class="mb-3">
-                    <label  class="form-label"> landArea</label>
-                    <input type="number" name="land" class="form-control" placeholder="give mobile no">
+                    <label  class="form-label"> land Area</label>
+                    <input type="number" required name="land" class="form-control" placeholder="Please enter mobile no">
                   </div>
                   <div class="mb-3">
                     <label  class="form-label"> Product</label>
-                    <input type="text" name="product" class="form-control" placeholder="give area">
+                    <input type="text" required name="product" class="form-control" placeholder="Please enter area">
                   </div>
                   <div class="mb-3">
-                    <label  class="form-label">InvestmentNeed</label>
-                    <input type="text" name="investment" class="form-control" placeholder="give area">
+                    <label  class="form-label">Investment Need</label>
+                    <input type="text" required name="investment" class="form-control" placeholder="Please enter area">
                   </div>
 
 

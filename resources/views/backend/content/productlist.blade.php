@@ -22,25 +22,41 @@
 
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Name</label>
-                  <input type="text" class="form-control" name="name" placeholder="give products name" >
+                  <input type="text" required class="form-control" name="name" placeholder="Please enter products name" >
 
                 </div>
                 <div class="mb-3">
                   <label  class="form-label"> Available stock</label>
-                  <input type="number" name="availableStock" class="form-control" placeholder="give available stock">
+                  <input type="number" required name="availableStock" class="form-control" placeholder="Please enter available stock">
                 </div>
                 <div class="mb-3">
                     <label  class="form-label"> Price</label>
-                    <input type="number" name="price" class="form-control" placeholder="give price">
+                    <input type="number" required name="price" class="form-control" placeholder="Please enter price">
                   </div>
                   <div class="mb-3">
                     <label  class="form-label"> Description</label>
-                    <input type="text" name="description" class="form-control" placeholder="give details">
+                    <input type="text" required name="description" class="form-control" placeholder="Please enter details">
                   </div>
+
+                  <div class="form-group">
+                    <label for="exampleInputDescription">Category</label>
+                    <select name="category_id" id="" type="text" class="form-control">
+                        @foreach ($category as $data)
+
+                        <option value="{{$data->id}}"> {{$data->category}} </option>
+
+                        @endforeach
+
+                    </select>
+
+                </div>
+
                   <div class="mb-3">
                     <label  class="form-label"> Image</label>
-                    <input  type="file"name="image" class="form-control">
+                    <input  type="file" required name="image" class="form-control">
                   </div>
+
+
 
 
 
@@ -72,6 +88,7 @@
         <th scope="col">Available stock</th>
         <th scope="col">Price</th>
         <th scope="col">Description</th>
+        <th scope="col">category</th>
         <th scope="col">Image</th>
         <th scope="col">Action</th>
       </tr>
@@ -84,6 +101,7 @@
         <td>{{$data->availableStock}}</td>
         <td>{{$data->price}}</td>
         <td>{{$data->description}}</td>
+        <td>{{$data->product_category->name}}</td>
         <td>
             <img style="width:120px; height:80px" src="{{url('files/photo/'.$data->image)}}"alt="Product Image" >
         </td>

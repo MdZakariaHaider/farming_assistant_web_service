@@ -9,4 +9,9 @@ class farmer extends Model
 {
     use HasFactory;
     protected $guarded=[];
+
+    public function farmer_agent()
+    {
+    return $this -> belongsTo(agent::class,'agent_id','id');
+    }
 }

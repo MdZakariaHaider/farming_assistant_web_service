@@ -62,20 +62,20 @@
 
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Name</label>
-                  <input type="name" class="form-control" name="name" placeholder="write name">
+                  <input type="name" required class="form-control" name="name" placeholder="Please enter name">
 
                 </div>
                 <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label">Description</label>
-                  <input type="text" class="form-control" name="description" placeholder="give details">
+                  <input type="text" required class="form-control" name="description" placeholder="Please enter details">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Quantity</label>
-                    <input type="number" class="form-control" name="quantity" placeholder="give quantity">
+                    <input type="number" required class="form-control" name="quantity" placeholder="Please enter quantity">
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Availability</label>
-                    <input type="date" class="form-control" name="availability" placeholder="give details">
+                    <input type="date" required class="form-control" name="availability" placeholder="give details">
                   </div>
 
 

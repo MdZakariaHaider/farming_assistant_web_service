@@ -5,7 +5,7 @@
     <section class=" text-center container bg-clear">
       <div class="row ">
         <div class="col-lg-6 col-md-8 mx-auto">
-          <h1 class="fw-bolder text-dark">All Products</h1>
+          
           <p>
             <a href="#" class="btn btn-primary my-2">You can orders from here</a>
           </p>
@@ -27,11 +27,10 @@
                     <p class="card-text fs-5 fw-bolder text-dark">{{$data->name}}</p>
                     <p class="text-muted fw-bolder"> Available  {{$data->availableStock}}Kg </p>
                     <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-info mx-2">Order</button>
-
-
-                      </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-primary">Add to cart</button>
+                            <a href="{{route('product.show',$data->id)}}" class="btn btn-sm btn-warning">View</a>
+                        </div>
                       <small class="text-muted fw-bolder">{{$data->price}} BDT</small>
                     </div>
                   </div>

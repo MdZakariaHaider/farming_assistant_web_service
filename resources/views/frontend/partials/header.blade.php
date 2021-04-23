@@ -9,6 +9,22 @@
           </a>
 
 
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Select Category
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+                @foreach ($categories as $category)
+
+              <a class="dropdown-item" href="{{route('products.under.category',$category->id)}}">{{$category->category}}</a>
+
+              @endforeach
+
+            </div>
+          </div>
+
+
 
           @auth()
           <span class="fw-bolder" style="color:blue;"> <h1>{{auth()->user()->name}}</h1></span> <a href="{{route('logout')}}"> Logout</a>

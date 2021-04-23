@@ -34,6 +34,12 @@
           </a>
         </li>
         <li class="nav-item p-2">
+            <a class="nav-link active text-white" href={{route('category')}}>
+               <span data-feather="users"></span>
+              categories
+             </a>
+           </li>
+        <li class="nav-item p-2">
            <a class="nav-link active text-white" href={{route('retailer')}}>
               <span data-feather="users"></span>
               Retailers

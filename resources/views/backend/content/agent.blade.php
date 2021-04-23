@@ -66,20 +66,20 @@
 
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Name</label>
-                  <input type="name" class="form-control" name="name" placeholder="give name">
+                  <input type="name" required class="form-control" name="name" placeholder=" Please enter name">
 
                 </div>
                 <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label">Address</label>
-                  <input type="string" class="form-control" name="address" placeholder="give address">
+                  <input type="string" required class="form-control" name="address" placeholder="Please enter address">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Mobile No</label>
-                    <input type="string" class="form-control" name="mobileNo" placeholder="give mobile no">
+                    <input type="string" required class="form-control" name="mobileNo" placeholder="Please enter mobile no">
                   </div>
                   <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Email</label>
-                    <input type="string" class="form-control" name="email" placeholder="give email">
+                    <input type="string" required class="form-control" name="email" placeholder="Please enter email">
                   </div>
 
 

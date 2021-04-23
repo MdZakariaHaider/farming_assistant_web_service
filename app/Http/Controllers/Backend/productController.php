@@ -3,15 +3,16 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Product;
 class productController extends Controller
 {
     public function product(){
-
+        $category=Category::all();
         $Product = product::paginate(5);
         $title='Products';
-        return view('backend.content.productlist', compact('Product','title'));
+        return view('backend.content.productlist', compact('Product','category','title'));
 
 
     }
@@ -47,8 +48,8 @@ class productController extends Controller
             'name'=>$request->name,
             'availableStock'=>$request->availableStock,
             'price'=>$request->price,
-
             'description'=>$request->description,
+            'category_id'=>$request->category_id,
             'image'=>$file_name,
         ]);
         return redirect()->back()->with('success','Product Created Successfully.');

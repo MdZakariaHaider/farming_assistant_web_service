@@ -65,21 +65,21 @@
 
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Name</label>
-                  <input type="name" class="form-control" name="name" placeholder="give name">
+                  <input type="name" required class="form-control" name="name" placeholder="Please enter name">
 
                 </div>
                 <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label">Address</label>
-                  <input type="text" class="form-control" name="address" placeholder="give address">
+                  <input type="text" required class="form-control" name="address" placeholder="Please enter address">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Contacts</label>
-                    <input type="number" class="form-control" name="contacts" placeholder="give contacts">
-                  </div
+                    <input type="number" required class="form-control" name="contacts" placeholder="Please enter contacts">
+                </div>
 
 
 
-        </div>
+
 
         <div class="modal-footer">
 

@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="fw-bold text-end">
-    <a style="margin-right: 120px ; margin-top:10px" class=" btn btn-primary " href="{{route('admin.login')}}">admin login</a>
+    <a style="margin-right: 120px ; margin-top:10px" class=" btn btn-danger " href="{{route('admin.login')}}">admin login</a>
 </div>
 <div class="row" style="padding: 115px">
 

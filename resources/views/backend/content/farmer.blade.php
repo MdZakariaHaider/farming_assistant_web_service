@@ -22,29 +22,46 @@
 
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Name</label>
-                  <input type="text" class="form-control" name="name" placeholder="give farmer name" >
+                  <input type="text" required class="form-control" name="name" placeholder="Please enter farmer name" >
 
                 </div>
                 <div class="mb-3">
                   <label  class="form-label"> Address</label>
-                  <input type="text" name="address" class="form-control" placeholder="give farmer address">
+                  <input type="text" required name="address" class="form-control" placeholder="Please enter farmer address">
                 </div>
                 <div class="mb-3">
                     <label  class="form-label"> Contacts</label>
-                    <input type="number" name="contacts" class="form-control" placeholder="give mobile no">
+                    <input type="number" required name="contacts" class="form-control" placeholder="Please enter mobile no">
                   </div>
                   <div class="mb-3">
                     <label  class="form-label"> Land area</label>
-                    <input type="number" name="landArea" class="form-control" placeholder="give area">
+                    <input type="number" required name="landArea" class="form-control" placeholder="Please enter area">
                   </div>
                   <div class="mb-3">
                     <label  class="form-label"> NidNo</label>
-                    <input type="number" name="nid" class="form-control" placeholder="give area">
+                    <input type="number" required name="nid" class="form-control" placeholder="Please enter nid no">
                   </div>
                   <div class="mb-3">
                     <label  class="form-label"> Crops</label>
-                    <input type="text" name="crop" class="form-control" placeholder="give area">
+                    <input type="text" required name="crop" class="form-control" placeholder="Please enter crop name">
                   </div>
+
+                  {{-- For drop down relation db --}}
+
+
+
+                  <div class="form-group">
+                    <label for="exampleInputDescription">Agent Name</label>
+                    <select name="agent_id" id="" type="text" class="form-control">
+                        @foreach ($agent as $data)
+
+                        <option value="{{$data->id}}"> {{$data->name}} </option>
+
+                        @endforeach
+
+                    </select>
+
+                </div>
 
 
 
@@ -78,6 +95,7 @@
         <th scope="col">Land Area</th>
         <th scope="col">Nid No</th>
         <th scope="col">Crops</th>
+        <th scope="col">Agent Name</th>
         <th scope="col">Action</th>
 
       </tr>
@@ -92,6 +110,7 @@
         <td>{{$data->landArea}}</td>
         <td>{{$data->nid}}</td>
         <td>{{$data->crop}}</td>
+        <td>{{$data->farmer_agent->name}}</td>
 
         <td>
             <a class="btn btn-primary" href="#">View</a>

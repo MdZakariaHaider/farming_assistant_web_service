@@ -19,6 +19,7 @@ class CreateProductsTable extends Migration
             $table->integer('availableStock');
             $table->integer('price');
             $table->text('description');
+            $table->text('category_id');
             $table->text('image')->nullable();
             $table->timestamps();
         });

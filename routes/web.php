@@ -16,6 +16,8 @@ use App\Http\Controllers\Frontend\HomepageController;
 use App\Http\Controllers\Frontend\UserController;
 use App\Http\Controllers\Frontend\AdminLoginController;
 use App\Http\Controllers\Backend\UserController as BackendUserController;
+use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Frontend\ProductController as FrontendProduct;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,8 +38,9 @@ Route::get('/logout',[UserController::class,'logout'])->name('logout');
 
 
 
-
-
+//single product view
+Route::get('/show/product/{product_id}',[FrontendProduct::class,'showProduct'])->name('product.show');
+Route::get('/products/under/category/{category_id}',[FrontendProduct::class,'productsUnderCategory'])->name('products.under.category');
 
 
 
@@ -100,6 +103,12 @@ Route::get('/order',[OrderController::class,'order'])->name('order');
 
 
 // admin login
+
+// category
+Route::get('/category',[CategoryController::class,'category'])->name('category');
+route::post('/category',[CategoryController::class,'create'])->name('category.create');
+Route::get('/category/delete/{id}',[CategoryController::class,'delete'])->name('category.delete');
+
 
 });
 });
