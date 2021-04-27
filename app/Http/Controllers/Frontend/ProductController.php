@@ -13,7 +13,7 @@ class ProductController extends Controller
         {
          $product=Product::find($id);
 
-         return view('frontend.partials.single-product');
+         return view('frontend.partials.single-product',compact('product'));
 
         }
         public function productsUnderCategory($cid)

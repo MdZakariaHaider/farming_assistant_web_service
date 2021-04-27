@@ -27,4 +27,26 @@ public function delete($id){
     $retailer->delete();
     return redirect()->back()->with('success','Retailer Deleted Successfully.');
 }
+public function editRetailer($id)
+{
+   //get all data of for this id
+    $retailer=Retailer::find($id);
+    // dd($agent);
+
+    //pass data to a view
+    return view('backend.edit.retailer',compact('retailer'));
+}
+
+public function updateRetailer(Request $request,$id)
+{
+    Retailer::find($id)->update([
+       'name'=>$request->name,
+       'address'=>$request->address,
+       'contacts'=>$request->contacts,
+
+
+
+    ]);
+    return redirect()->route('retailer')->with('success','Updated Successfully.');
+}
 }

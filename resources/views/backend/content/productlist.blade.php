@@ -33,10 +33,11 @@
                     <label  class="form-label"> Price</label>
                     <input type="number" required name="price" class="form-control" placeholder="Please enter price">
                   </div>
-                  <div class="mb-3">
-                    <label  class="form-label"> Description</label>
-                    <input type="text" required name="description" class="form-control" placeholder="Please enter details">
-                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputDescription">Description</label>
+                    <input type="text" required name="description" class="form-control" placeholder="Please enter description">
+
+                </div>
 
                   <div class="form-group">
                     <label for="exampleInputDescription">Category</label>
@@ -100,15 +101,15 @@
         <td>{{$data->name }}</td>
         <td>{{$data->availableStock}}</td>
         <td>{{$data->price}}</td>
-        <td>{{$data->description}}</td>
-        <td>{{$data->product_category->name}}</td>
+        <td>{{$data->product_category->description}}</td>
+        <td>{{$data->product_category->category}}</td>
         <td>
             <img style="width:120px; height:80px" src="{{url('files/photo/'.$data->image)}}"alt="Product Image" >
         </td>
         <td>
             <a class="btn btn-primary" href="#">View</a>
             <a class="btn btn-danger" href={{route('product.delete',$data['id'])}}>Delete</a>
-            <a class="btn btn-warning" href="#">Edit</a>
+            <a class="btn btn-success" href="{{route('product.edit',$data->id)}}">Edit</a>
         </td>
       </tr>
       @endforeach

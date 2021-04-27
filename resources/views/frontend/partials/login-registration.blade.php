@@ -38,7 +38,7 @@
               <input name="password" required type="password" class="form-control" id="exampleInputPassword1">
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit"  class="btn btn-primary">Submit</button>
           </form>
     </div>
     <div class="col-md-6">

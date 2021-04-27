@@ -60,4 +60,25 @@ public function delete($id){
     $product->delete();
     return redirect()->back()->with('success','Product Deleted Successfully.');
 }
+public function editProduct($id)
+{
+   //get all data of for this id
+    $product=Product::find($id);
+    $category=Category::all();
+    //pass data to a view
+    return view('backend.edit.product',compact('product','category'));
+}
+
+public function updateProduct(Request $request,$id)
+{
+    Product::find($id)->update([
+       'name'=>$request->name,
+       'availableStock'=>$request->availableStock,
+       'price'=>$request->price,
+       'description'=>$request->description,
+       'category_id'=>$request->category_id,
+
+    ]);
+    return redirect()->route('product')->with('success','Updated Successfully.');
+}
 }

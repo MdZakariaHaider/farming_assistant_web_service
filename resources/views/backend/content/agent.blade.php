@@ -40,7 +40,7 @@
             <td>
                 <a class="btn btn-primary" href="#">View</a>
                 <a class="btn btn-danger" href={{route('agent.delete',$data['id'])}}>Delete</a>
-                <a class="btn btn-warning" href="#">Edit</a>
+                <a class="btn btn-success" href="{{route('agent.edit',$data->id)}}">Edit</a>
             </td>
           </tr>
           @endforeach

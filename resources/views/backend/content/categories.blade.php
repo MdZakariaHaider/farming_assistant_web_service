@@ -4,8 +4,14 @@
 
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Create Agent List
+    Create category List
   </button>
+   {{-- for successfull masage --}}
+   @if(session()->has('success'))
+   <div class="alert alert-success">
+       {{session()->get('success')}}
+   </div>
+   @endif
 
 
 <table class="table">
@@ -30,7 +36,7 @@
             <td>
                 <a class="btn btn-primary" href="#">View</a>
                 <a class="btn btn-danger" href={{route('category.delete',$data['id'])}}>Delete</a>
-                <a class="btn btn-warning" href="#">Edit</a>
+                <a class="btn btn-success" href="{{route('category.edit',$data->id)}}">Edit</a>
             </td>
           </tr>
           @endforeach

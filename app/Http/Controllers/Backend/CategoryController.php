@@ -29,4 +29,25 @@ public function delete($id){
     $category->delete();
     return redirect()->back()->with('success','category Deleted Successfully.');
 }
+public function editCategory($id)
+{
+   //get all data of for this id
+    $category=Category::find($id);
+    // dd($agent);
+
+    //pass data to a view
+    return view('backend.edit.category',compact('category'));
+}
+
+public function updateCategory(Request $request,$id)
+{
+    Category::find($id)->update([
+       'category'=>$request->category,
+       'description'=>$request->description,
+
+
+
+    ]);
+    return redirect()->route('category')->with('success','Updated Successfully.');
+}
 }

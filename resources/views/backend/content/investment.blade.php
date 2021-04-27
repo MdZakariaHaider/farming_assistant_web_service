@@ -81,7 +81,7 @@
         <td>
             <a class="btn btn-success" href="#">Pending</a>
             <a class="btn btn-danger" href={{route('farmer.delete',$data['id'])}}>Delete</a>
-            <a class="btn btn-warning" href="#">Edit</a>
+            <a class="btn btn-success" href="{{route('investment.edit',$data->id)}}">Edit</a>
         </td>
 
       </tr>

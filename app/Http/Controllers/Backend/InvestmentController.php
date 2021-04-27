@@ -30,4 +30,25 @@ public function delete($id){
     $farmer->delete();
     return redirect()->route('investment');
 }
+public function editInvestment($id)
+{
+   //get all data of for this id
+    $investment=investment::find($id);
+    $farmer=farmer::all();
+    //pass data to a view
+    return view('backend.edit.investment',compact('investment','farmer'));
+}
+
+public function updateInvestment(Request $request,$id)
+{
+    investment::find($id)->update([
+       'farmer_id'=>$request->farmer_id,
+       'land'=>$request->land,
+       'product'=>$request->product,
+       'investment'=>$request->investment,
+
+
+    ]);
+    return redirect()->route('investment')->with('success','Updated Successfully.');
+}
 }

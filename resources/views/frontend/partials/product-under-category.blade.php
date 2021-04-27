@@ -27,7 +27,7 @@
                   <p class="text-muted fw-bolder"> Available  {{$data->availableStock}}Kg </p>
                   <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                          <button type="button" class="btn btn-sm btn-primary">Add to cart</button>
+
                           <a href="{{route('product.show',$data->id)}}" class="btn btn-sm btn-warning">View</a>
                       </div>
                     <small class="text-muted fw-bolder">{{$data->price}} BDT</small>
