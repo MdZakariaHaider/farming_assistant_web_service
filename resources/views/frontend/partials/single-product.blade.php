@@ -5,6 +5,7 @@
 <div class="card">
     <div class="container-fliud"  >
         <div class="wrapper row">
+
             <div class="preview col-md-6">
 
 
@@ -14,6 +15,7 @@
                 </ul>
 
             </div>
+
             <div class="details col-md-6">
                 <h3 class="product-title">{{$product->name}}</h3>
 
@@ -21,13 +23,14 @@
                 <h4 class="price"> Price:{{$product->price}}</h4>
 
 
-                <div class="action">
-                    <button type="button" class="btn btn-sm btn-warning">Buy now</button>
+                <div >
+                    <a href="{{route('show.product',$product->id)}}" class="btn btn-sm btn-warning">Buy Now</a>
 
                 </div>
             </div>
 
     </div>
+
 </div>
 </div>
 </div>

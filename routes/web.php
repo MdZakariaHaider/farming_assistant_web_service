@@ -18,6 +18,9 @@ use App\Http\Controllers\Frontend\AdminLoginController;
 use App\Http\Controllers\Backend\UserController as BackendUserController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Frontend\ProductController as FrontendProduct;
+use App\Http\Controllers\Frontend\BookingController;
+use App\Http\Controllers\Frontend\ProfileController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,6 +44,14 @@ Route::get('/logout',[UserController::class,'logout'])->name('logout');
 //single product view
 Route::get('/show/product/{product_id}',[FrontendProduct::class,'showProduct'])->name('product.show');
 Route::get('/products/under/category/{category_id}',[FrontendProduct::class,'productsUnderCategory'])->name('products.under.category');
+
+
+//booking
+Route::get('/show/product/show/{id}',[BookingController::class,'showProduct'])->name('show.product');
+Route::post('/booking',[BookingController::class,'booking'])->name('product.booking');
+
+// Profile
+Route::get('profile',[ProfileController::class,'showProfile'])->name('profile.show');
 
 
 

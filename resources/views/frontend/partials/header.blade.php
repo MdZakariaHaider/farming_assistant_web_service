@@ -23,12 +23,20 @@
 
             </div>
           </div>
-
-
-
           @auth()
-          <span class="fw-bolder" style="color:blue;"> <h1>{{auth()->user()->name}}</h1></span> <a href="{{route('logout')}}"> Logout</a>
-      @else
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           {{ucfirst(auth()->user()->name)}}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="{{route('profile.show')}}">Profile</a>
+             <a class="dropdown-item" href="{{route('logout')}}"> Logout</a>
+
+
+            </div>
+          </li>
+
+          @else
           <a href="{{route('login.registration.form')}}" style="color: blue" class="fw-bolder">Login/Registration</a>
       @endauth
 
