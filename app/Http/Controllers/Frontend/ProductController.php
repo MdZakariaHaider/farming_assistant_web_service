@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers\Frontend;
-use App\Models\Product;
+use App\Models\Booking;
 
-use App\Http\Controllers\Controller;
+use App\Models\Product;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class ProductController extends Controller
 {
@@ -12,8 +13,9 @@ class ProductController extends Controller
         public function showProduct($id)
         {
          $product=Product::find($id);
+         $check=Booking::where('product_id',$id)->first();
 
-         return view('frontend.partials.single-product',compact('product'));
+         return view('frontend.partials.single-product',compact('product','check'));
 
         }
         public function productsUnderCategory($cid)

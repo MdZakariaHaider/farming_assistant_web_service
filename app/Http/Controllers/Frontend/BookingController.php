@@ -13,6 +13,7 @@ class BookingController extends Controller
         $product=Product::find($id);
         $P_price=$product->price * $product->availableStock;
 
+
         return view('frontend.partials.ShowProduct',compact('product','P_price'));
     }
     public function Booking(Request $request)

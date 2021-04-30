@@ -21,6 +21,9 @@ class InvestmentController extends Controller
             'land'=>$request->land,
             'product'=>$request->product,
             'investment'=>$request->investment,
+            'c_quantity'=>$request->investment/$request->c_rate,
+            'c_rate'=>$request->c_rate,
+            'd_date'=>$request->d_date,
         ]);
         return redirect()->back();
 }
@@ -41,11 +44,20 @@ public function editInvestment($id)
 
 public function updateInvestment(Request $request,$id)
 {
+
+
+
+
     investment::find($id)->update([
        'farmer_id'=>$request->farmer_id,
        'land'=>$request->land,
        'product'=>$request->product,
        'investment'=>$request->investment,
+       'c_rate'=>$request->c_rate,
+       'r_crop'=>$request->r_crop,
+       'd_date'=>$request->d_date,
+
+
 
 
     ]);

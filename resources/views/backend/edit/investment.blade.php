@@ -28,6 +28,18 @@
             <label  class="form-label">Investment Need</label>
             <input value="{{$investment->investment}}"  type="text"  name="investment" class="form-control" placeholder="Please enter area">
           </div>
+          <div class="mb-3">
+            <label  class="form-label">Rate/kg</label>
+            <input value="{{$investment->c_rate}}" type="text"  name="c_rate" class="form-control" placeholder="Please enter Rate">
+          </div>
+          <div class="mb-3">
+            <label  class="form-label"> Recieved Crop</label>
+            <input  value="{{$investment->r_crop}}" type="number"  name="r_crop" class="form-control" placeholder="">
+          </div>
+          <div class="mb-3">
+            <label  class="form-label"> Delivery Date</label>
+            <input  value="{{$investment->d_date}}"   type="date"  name="d_date" class="form-control" placeholder="">
+          </div>
 
 
 

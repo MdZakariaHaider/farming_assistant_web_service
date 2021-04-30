@@ -22,11 +22,14 @@
                 <p class="product-description">{{$product->description}}</p>
                 <h4 class="price"> Price:{{$product->price}}</h4>
 
-
+                @if($check)
+                    <span style="padding: 10px;" class="alert alert-danger">Already sold.</span>
+                @else
                 <div >
                     <a href="{{route('show.product',$product->id)}}" class="btn btn-sm btn-warning">Buy Now</a>
 
                 </div>
+                @endif
             </div>
 
     </div>

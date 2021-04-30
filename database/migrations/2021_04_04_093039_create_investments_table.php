@@ -19,6 +19,11 @@ class CreateInvestmentsTable extends Migration
             $table->integer('land');
             $table->string('product',20);
             $table->text('investment');
+            $table->string('c_rate');
+            $table->integer('c_quantity')->default(0);
+            $table->integer('r_crop')->default(0);
+            $table->integer('dew')->default(0);
+            $table->date('d_date');
             $table->timestamps();
         });
     }

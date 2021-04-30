@@ -16,6 +16,24 @@ class productController extends Controller
 
 
     }
+
+    public function search(Request $request)
+    {
+        $category=Category::all();
+        $search=$request->search;
+        if($search){
+            $Product=Product::where('name','like','%'.$search.'%')
+                            ->orWhere('price','like','%'.$search.'%')->paginate(5);
+        }else
+        {
+
+            $Product=Product::with('productCategory')->paginate(5);
+        }
+
+        // where(name=%search%)
+        $title="Search result";
+        return view('backend.content.productlist',compact('title','Product','search','category'));
+    }
     public function create(Request $request){
         $file_name='';
 

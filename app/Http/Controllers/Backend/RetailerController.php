@@ -5,17 +5,22 @@ namespace App\Http\Controllers\backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Retailer;
+use App\Models\User;
 
 class retailerController extends Controller
 {
     public function retailer(){
-        $categories=Retailer::paginate(5);
+        $retailer=User::paginate(10);
+
+        // $categories=Retailer::paginate(5);
         $title='Retailers';
-        return view('backend.content.retailers',compact('categories','title'));
+        return view('backend.content.retailers',compact('title', 'retailer'));
     }
     public function create(Request $request){
+
         Retailer::create([
             'name'=>$request->name,
+            'email'=>$request->email,
             'address'=>$request->address,
             'contacts'=>$request->contacts,
         ]);
@@ -41,6 +46,7 @@ public function updateRetailer(Request $request,$id)
 {
     Retailer::find($id)->update([
        'name'=>$request->name,
+       'email'=>$request->email,
        'address'=>$request->address,
        'contacts'=>$request->contacts,
 

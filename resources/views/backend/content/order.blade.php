@@ -11,7 +11,7 @@
         <th scope="col">Product Name</th>
         <th scope="col">Product price</th>
         <th scope="col">Quantity</th>
-        <th scope="col">Status</th>
+        
       </tr>
     </thead>
     <tbody>
@@ -26,11 +26,8 @@
             <td>{{$data->product_name}}</td>
             <td>{{$data->product_price}}</td>
             <td>{{$data->availableStock}}</td>
-            <td>
-                <button type="button" class="btn btn-outline-success">Approve</button>
-                <button type="button" class="btn btn-outline-danger">Reject</button>
 
-            </td>
+
 
           </tr>
           @endforeach

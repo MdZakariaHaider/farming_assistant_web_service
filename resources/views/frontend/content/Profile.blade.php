@@ -18,8 +18,9 @@
                         @if (auth()) {{auth()->user()->name}}
 
                         @else
-                        <h1> not found</h1>
+                        <h2> not found</h1>
                         @endif
+
                         </h2>
                         </div>
                             <hr>
@@ -29,8 +30,54 @@
                             {{-- <li><p><span class="glyphicon glyphicon-map-marker one" style="width:50px;"></span>Hyderabad</p></li>
                             <li><p><span class="glyphicon glyphicon-new-window one" style="width:50px;"></span><a href="#">www.example.com</p></a> --}}
                           </ul>
+                          <h2>Address:
+                            @if (auth()) {{auth()->user()->address}}
+
+                            @else
+                            <h1> not found</h1>
+                            @endif
+                            <h2>Contacts:
+                                @if (auth()) {{auth()->user()->contact}}
+
+                                @else
+                                <h1> not found</h1>
+                                @endif
+
+                          <table class="table">
+                          <thead>
+                            <tr class="fw-bolder" style="color:black">
+                              <th scope="col">#</th>
+
+                              <th scope="col">Product Name</th>
+                              <th scope="col">Product price</th>
+                              <th scope="col">Quantity</th>
+
+
+                            </tr>
+                          </thead>
+                          @foreach ($booking as $key=>$data )
+
+                          <tbody>
+                          <tr class='fw-bolder style="color:black'>
+                            <th scope="row">{{$key+1}}</th>
+
+
+                            <td>{{$data->product_name}}</td>
+                            <td>{{$data->product_price}}</td>
+                            <td>{{$data->availableStock}}</td>
+
+
+
+                          </tr>
+                          </tbody>
+
+                          @endforeach
+                        </table>
                       </div>
+
                   </div>
+
                 </div>
+
 
 @endsection

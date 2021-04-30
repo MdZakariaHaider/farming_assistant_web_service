@@ -29,7 +29,7 @@
            {{ucfirst(auth()->user()->name)}}
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="{{route('profile.show')}}">Profile</a>
+              <a class="dropdown-item" href="{{route('profile.show')}}"> Your Profile</a>
              <a class="dropdown-item" href="{{route('logout')}}"> Logout</a>
 
 

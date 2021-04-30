@@ -16,8 +16,9 @@ class CreateRetailers extends Migration
         Schema::create('retailers', function (Blueprint $table) {
             $table->id();
             $table->string('name',100);
+            $table->string('email',100);
             $table->string('address',255);
-            $table->integer('contacts');
+            $table->string('contacts');
             $table->timestamps();
         });
     }

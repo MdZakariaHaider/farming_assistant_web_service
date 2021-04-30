@@ -34,16 +34,38 @@
                 </div>
                 <div class="mb-3">
                     <label  class="form-label"> land Area</label>
-                    <input type="number" required name="land" class="form-control" placeholder="Please enter mobile no">
+                    <input type="number" required name="land" class="form-control" placeholder="Please enter land Area">
                   </div>
                   <div class="mb-3">
                     <label  class="form-label"> Product</label>
-                    <input type="text" required name="product" class="form-control" placeholder="Please enter area">
+                    <input type="text" required name="product" class="form-control" placeholder="Please enter Product name">
                   </div>
                   <div class="mb-3">
-                    <label  class="form-label">Investment Need</label>
-                    <input type="text" required name="investment" class="form-control" placeholder="Please enter area">
+                    <label  class="form-label">Investment Amount</label>
+                    <input type="text" required name="investment" class="form-control" placeholder="Please enter Investment Amount">
                   </div>
+                  <div class="mb-3">
+                    <label  class="form-label">Rate/kg</label>
+                    <input type="text" required name="c_rate" class="form-control" placeholder="Please enter Rate">
+                  </div>
+                  <div class="mb-3">
+                    <label  class="form-label"> Crop Quantity</label>
+                    <input type="number"  name="c_quantity" class="form-control" placeholder="It will generate automatically">
+                  </div>
+                  <div class="mb-3">
+                    <label  class="form-label"> Recieved Crop</label>
+                    <input type="number"  name="r_crop" class="form-control" placeholder="Admin will fill this">
+                  </div>
+                  <div class="mb-3">
+                    <label  class="form-label">Due</label>
+                    <input type="number"  name="dew" class="form-control" placeholder="It will generate automatically">
+                  </div>
+                  <div class="mb-3">
+                    <label  class="form-label"> Delivery Date</label>
+                    <input type="date" required name="d_date" class="form-control" placeholder="Please enter Delivery Date">
+                  </div>
+
+
 
 
 
@@ -65,19 +87,31 @@
         <th scope="col">Farmer Name</th>
         <th scope="col">Land Area</th>
         <th scope="col">Product</th>
-        <th scope="col">Investment Need</th>
+        <th scope="col">Investment Amount</th>
+        <th scope="col">Rate/kg</th>
+        <th scope="col"> Crop Quantity</th>
+        <th scope="col">Recieved Crop</th>
+        <th scope="col">Due</th>
+        <th scope="col">Delivery Date</th>
         <th scope="col">Action</th>
 
       </tr>
     </thead>
     <tbody>
         @foreach ($investment as $key=>$data )
+        
       <tr class='fw-bolder style="color:black'>
         <th scope="row">{{$key+1}}</th>
         <td>{{$data->farmer->name}}</td>
         <td>{{$data->land}}</td>
         <td>{{$data->product}}</td>
         <td>{{$data->investment}}</td>
+        <td>{{$data->c_rate}}</td>
+        <td>{{$data->investment/$data->c_rate}}</td>
+        <td>{{$data->r_crop}}</td>
+        <td>{{$data->c_quantity-$data->r_crop}}</td>
+        <td>{{$data->d_date}}</td>
+
         <td>
             <a class="btn btn-success" href="#">Pending</a>
             <a class="btn btn-danger" href={{route('farmer.delete',$data['id'])}}>Delete</a>

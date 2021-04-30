@@ -42,13 +42,17 @@ Route::get('/logout',[UserController::class,'logout'])->name('logout');
 
 
 //single product view
-Route::get('/show/product/{product_id}',[FrontendProduct::class,'showProduct'])->name('product.show');
+
 Route::get('/products/under/category/{category_id}',[FrontendProduct::class,'productsUnderCategory'])->name('products.under.category');
 
 
+Route::group(['middleware'=>'auth'],function(){
+    Route::get('/show/product/{product_id}',[FrontendProduct::class,'showProduct'])->name('product.show');
+    Route::get('/show/product/show/{id}',[BookingController::class,'showProduct'])->name('show.product');
+    Route::post('/booking',[BookingController::class,'booking'])->name('product.booking');
+
+});
 //booking
-Route::get('/show/product/show/{id}',[BookingController::class,'showProduct'])->name('show.product');
-Route::post('/booking',[BookingController::class,'booking'])->name('product.booking');
 
 // Profile
 Route::get('profile',[ProfileController::class,'showProfile'])->name('profile.show');
@@ -95,6 +99,7 @@ route::post('/product',[ProductController::class,'create'])->name('product.creat
 Route::get('/product/delete/{id}',[ProductController::class,'delete'])->name('product.delete');
 Route::get('/product/edit/{id}',[ProductController::class,'editProduct'])->name('product.edit');
 Route::put('/product/update/{id}',[ProductController::class,'updateProduct'])->name('product.update');
+Route::post('/product/search',[ProductController::class,'search'])->name('product.search');
 
 //crop
 
@@ -118,6 +123,7 @@ route::post('/investment',[InvestmentController::class,'create'])->name('investm
 Route::get('/investment/delete/{id}',[InvestmentController::class,'delete'])->name('investment.delete');
 Route::get('/investment/edit/{id}',[InvestmentController::class,'editInvestment'])->name('investment.edit');
 Route::put('/investment/update/{id}',[InvestmentController::class,'updateInvestment'])->name('investment.update');
+
 
 
 //dashboard

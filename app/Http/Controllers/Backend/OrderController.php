@@ -4,6 +4,7 @@ namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Booking;
+use App\Models\Order;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
