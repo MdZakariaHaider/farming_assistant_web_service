@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Mail\confirmationmail;
+use App\Mail\confirmationmail2;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class UserController extends Controller
 
@@ -27,7 +30,7 @@ class UserController extends Controller
 
 
 
-        User::create([
+       $add= User::create([
             'name'=>$request->name,
             'email'=>$request->email,
             'address'=>$request->address,
@@ -35,6 +38,7 @@ class UserController extends Controller
             'password'=>bcrypt($request->password),
 
         ]);
+        Mail::to($add->email)->send(new confirmationmail2($add));
         return redirect()->back()->with('success','User Registration Successful');
 
     }
