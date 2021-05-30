@@ -1,7 +1,14 @@
 @extends('frontend.partials.master')
 @section('content')
 
-<div class="container" style="padding: 200px">
+@if(session()->has('success'))
+
+  <div class="alert alert-success mt-4">
+        {{session()->get('success')}}
+  </div>
+  @endif
+
+<div class="container"  style="padding: 200px">
 <div class="card">
     <div class="container-fliud"  >
         <div class="wrapper row">
@@ -27,6 +34,8 @@
                 @else
                 <div >
                     <a href="{{route('show.product',$product->id)}}" class="btn btn-sm btn-warning">Buy Now</a>
+                    <a href="{{route('addToCart', $product->id)}}" class="btn btn-sm btn-dark">add to cart</a>
+
 
                 </div>
                 @endif

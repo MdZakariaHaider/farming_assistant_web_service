@@ -22,6 +22,7 @@
               @endforeach
 
             </div>
+
           </div>
           @auth()
           <li class="nav-item dropdown">
@@ -30,6 +31,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item" href="{{route('profile.show')}}"> Your Profile</a>
+              <a class="dropdown-item" href="{{route('carts')}}"> Cart({{$product_count->where('user_id',auth()->user()->id)->count()}})</a>
              <a class="dropdown-item" href="{{route('logout')}}"> Logout</a>
 
 

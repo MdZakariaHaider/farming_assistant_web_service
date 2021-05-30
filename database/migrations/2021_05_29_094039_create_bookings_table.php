@@ -15,11 +15,13 @@ class CreateBookingsTable extends Migration
     {
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
+            $table->integer('cart_id');
             $table->integer('product_id');
             $table->integer('user_id');
             $table->text('product_name');
             $table->integer('product_price');
-            $table->integer('availableStock');
+            $table->integer('quantity');
+            $table->integer('total');
             $table->timestamps();
         });
     }

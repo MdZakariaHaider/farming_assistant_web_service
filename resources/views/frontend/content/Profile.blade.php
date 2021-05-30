@@ -24,33 +24,34 @@
                         </h2>
                         </div>
                             <hr>
-                          <ul class="container details">
+                            
+
                             {{-- <li><p><span class="glyphicon glyphicon-earphone one" style="width:50px;"></span> </p></li> --}}
-                            <li><p><span class="glyphicon glyphicon-envelope one" style="width:50px;"></span>@if (auth()) {{auth()->user()->email}} @endif</p></li>
+                           <p>@if (auth()) {{auth()->user()->email}} @endif</p>
                             {{-- <li><p><span class="glyphicon glyphicon-map-marker one" style="width:50px;"></span>Hyderabad</p></li>
                             <li><p><span class="glyphicon glyphicon-new-window one" style="width:50px;"></span><a href="#">www.example.com</p></a> --}}
-                          </ul>
-                          <h2>Address:
+
+                          <p>Address:
                             @if (auth()) {{auth()->user()->address}}
 
                             @else
                             <h1> not found</h1>
                             @endif
-                            <h2>Contacts:
+                            <p>Contacts:
                                 @if (auth()) {{auth()->user()->contact}}
 
                                 @else
-                                <h1> not found</h1>
+                                <p> not found</p>
                                 @endif
 
                           <table class="table">
                           <thead>
                             <tr class="fw-bolder" style="color:black">
-                              <th scope="col">#</th>
+                              {{-- <th scope="col">#</th> --}}
 
-                              <th scope="col">Product Name</th>
+                              {{-- <th scope="col">Product Name</th>
                               <th scope="col">Product price</th>
-                              <th scope="col">Quantity</th>
+                              <th scope="col">Quantity</th> --}}
 
 
                             </tr>

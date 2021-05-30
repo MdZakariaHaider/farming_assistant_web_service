@@ -17,8 +17,10 @@ use App\Http\Controllers\Frontend\UserController;
 use App\Http\Controllers\Frontend\AdminLoginController;
 use App\Http\Controllers\Backend\UserController as BackendUserController;
 use App\Http\Controllers\Backend\CategoryController;
+
 use App\Http\Controllers\Frontend\ProductController as FrontendProduct;
 use App\Http\Controllers\Frontend\BookingController;
+use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\ProfileController;
 
 /*
@@ -37,6 +39,17 @@ Route::get('/login-registration',[UserController::class,'showLoginRegistration']
 Route::post('/registration',[UserController::class,'registration'])->name('registration');
 Route::post('/login',[UserController::class,'login'])->name('login');
 Route::get('/logout',[UserController::class,'logout'])->name('logout');
+//for cart
+Route::get('/product/cart/{id}',[FrontendCartController::class,'cart'])->name('product.cart');
+
+//for add-to-cart
+Route::get('/product/carts',[CartController::class,'cart'])->name('carts');
+
+Route::get('/add-to-cart/{id}',[CartController::class,'addToCart'])->name('addToCart');
+
+Route::get('/productRemove/{id}',[CartController::class,'productRemove'])->name('productRemove');
+
+Route::post('/orderConfirm',[CartController::class,'orderConfirm'])->name('orderConfirm');
 
 
 

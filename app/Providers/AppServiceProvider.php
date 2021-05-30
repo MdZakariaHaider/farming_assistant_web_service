@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-
+use App\Models\Cart;
 use App\Models\Category;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\View;
@@ -35,6 +35,17 @@ class AppServiceProvider extends ServiceProvider
 
         View::share('categories', $cats);
         View::share('products', $products);
+        // $count=0;
+
+    $productCount = Cart::all();
+
+    // dd( $request->quantity );
+    view()->share('product_count',$productCount);
+
+    // dd($foodItemCount);
+
+
     }
+
 
 }
