@@ -53,11 +53,12 @@ class CartController extends Controller
             Cart::create($cartData);
         }else{
 
-                $oldQuantity = $checkAlreadyExistItem->quantity;
+                // $oldQuantity = $checkAlreadyExistItem->quantity;
 
-                $checkAlreadyExistItem->update([
-                    'quantity' =>$oldQuantity + 1
-                ]);
+                // $checkAlreadyExistItem->update([
+                //     'quantity' =>$oldQuantity + 1
+                // ]);
+                return redirect()->back()->with('error','Already added.');
 
         }
 

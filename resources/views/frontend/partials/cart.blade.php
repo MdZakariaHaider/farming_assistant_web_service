@@ -4,7 +4,7 @@
 
 @section('content')
 <div>
-    <h3 class="text-center mt-5">Food Cart</h3>
+    <h3 class="text-center mt-5">Product Cart</h3>
 </div>
 <form action="{{route('orderConfirm')}}" method="post" >
 

@@ -7,10 +7,16 @@
            Dashboard
           </a>
              </li>
-        <li class="nav-item p-2">
+        {{-- <li class="nav-item p-2">
          <a class="nav-link active text-white"  href={{route('admin')}}>
             <span data-feather="at-sign"></span>
             Admin
+          </a>
+        </li> --}}
+           <li class="nav-item p-2">
+         <a class="nav-link active text-white" href={{route('Report')}}>
+            <span data-feather="truck"></span>
+           Report
           </a>
         </li>
 
@@ -63,6 +69,7 @@
               orders
              </a>
            </li>
+          
 
 
       </ul>

@@ -10,7 +10,7 @@ use App\Models\User;
 class retailerController extends Controller
 {
     public function retailer(){
-        $retailer=User::paginate(10);
+        $retailer=User::where('role','user')->paginate(10);
 
         // $categories=Retailer::paginate(5);
         $title='Retailers';

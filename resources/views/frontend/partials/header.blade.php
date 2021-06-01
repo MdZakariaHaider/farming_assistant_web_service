@@ -3,6 +3,8 @@
 
     <div class="navbar navbar-dark bg-dark shadow-sm">
       <div class="container">
+
+
         <a href="{{route('homepage')}}" class="navbar-brand d-flex align-items-center">
 
             <strong style="color:blue"><h3>Farming Assistant Web Service </h3></strong>
@@ -45,4 +47,11 @@
 
       </div>
     </div>
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+
+
+
+
+
   </header>

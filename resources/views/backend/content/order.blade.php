@@ -25,7 +25,8 @@
             <td>{{$data->user_id}}</td>
             <td>{{$data->product_name}}</td>
             <td>{{$data->product_price}}</td>
-            <td>{{$data->availableStock}}</td>
+           
+            <td>{{$data->quantity}}</td>
 
 
 

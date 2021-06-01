@@ -17,11 +17,13 @@ use App\Http\Controllers\Frontend\UserController;
 use App\Http\Controllers\Frontend\AdminLoginController;
 use App\Http\Controllers\Backend\UserController as BackendUserController;
 use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Backend\ReportController;
 
 use App\Http\Controllers\Frontend\ProductController as FrontendProduct;
 use App\Http\Controllers\Frontend\BookingController;
 use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\ProfileController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +37,7 @@ use App\Http\Controllers\Frontend\ProfileController;
 */
 // homepage product
 Route::get('/',[HomepageController::class,'homepage'])->name('homepage');
+
 Route::get('/login-registration',[UserController::class,'showLoginRegistration'])->name('login.registration.form');
 Route::post('/registration',[UserController::class,'registration'])->name('registration');
 Route::post('/login',[UserController::class,'login'])->name('login');
@@ -81,7 +84,7 @@ Route::group(['prefix'=>'admin'],function (){// admin login route
 
 
 Route::group(['middleware'=>'admin-auth'],function (){
-Route::get('/',[homeController::class,'home'])->name('home');
+Route::get('/home',[homeController::class,'home'])->name('home');
 
 
 // admin
@@ -140,7 +143,7 @@ Route::put('/investment/update/{id}',[InvestmentController::class,'updateInvestm
 
 
 //dashboard
-Route::get('/dashboard',[DashboardController::class,'dashboard'])->name('dashboard');
+Route::get('/',[DashboardController::class,'dashboard'])->name('dashboard');
 
 
 // order
@@ -156,6 +159,11 @@ route::post('/category',[CategoryController::class,'create'])->name('category.cr
 Route::get('/category/delete/{id}',[CategoryController::class,'delete'])->name('category.delete');
 Route::get('/category/edit/{id}',[CategoryController::class,'editCategory'])->name('category.edit');
 Route::put('/category/update/{id}',[CategoryController::class,'updateCategory'])->name('category.update');
+
+
+//report
+Route::get('/Report',[ReportController::class,'Report'])->name('Report');
+Route::get('/ReportGenerate',[ReportController::class,'ReportGenerate'])->name('ReportGenerate');
 
 
 });
