@@ -3,7 +3,7 @@
 @section('content')
 <div class="" >
 	<div class="row">
-	<div class=" alert-info alert-dismissible" role="alert" >
+	<div class=" alert-warning bg-warning alert-dismissible" role="alert" >
   <button  type="button" onclick="this.parentNode.parentNode.removeChild(this.parentNode);" class="close btn btn-info" data-dismiss="alert">Not Interested</button>
   <strong><i class="fa fa-warning"></i> </strong> 
   <marquee>

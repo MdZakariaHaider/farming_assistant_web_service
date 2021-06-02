@@ -1,12 +1,13 @@
 @extends('frontend.partials.master')
 @section('content')
+
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
-            <div class="container">
-                <div class="jumbotron">
+            <div class="container " >
+                <div class="jumbotron " style="background: url('/image/bg4.png');">
                   <div class="row">
                       <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
                           <img src="https://www.svgimages.com/svg-image/s5/man-passportsize-silhouette-icon-256x256.png" alt="stack photo" class="img">
@@ -80,5 +81,5 @@
 
                 </div>
 
-
+@include('frontend.partials.footerdesign');
 @endsection

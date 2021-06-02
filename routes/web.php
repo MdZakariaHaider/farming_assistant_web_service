@@ -40,6 +40,7 @@ Route::get('/',[HomepageController::class,'homepage'])->name('homepage');
 
 Route::get('/login-registration',[UserController::class,'showLoginRegistration'])->name('login.registration.form');
 Route::post('/registration',[UserController::class,'registration'])->name('registration');
+Route::get('/reg', [UserController::class, 'reg'])->name('reg');
 Route::post('/login',[UserController::class,'login'])->name('login');
 Route::get('/logout',[UserController::class,'logout'])->name('logout');
 //for cart

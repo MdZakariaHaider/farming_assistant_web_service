@@ -17,6 +17,11 @@ class UserController extends Controller
     {
         return view('frontend.partials.login-registration');
     }
+    public function reg()
+    {
+        return view('frontend.partials.reg');
+    }
+
     public function registration(request $request)
     {
         $request->validate([
@@ -39,7 +44,7 @@ class UserController extends Controller
 
         ]);
         Mail::to($add->email)->send(new confirmationmail2($add));
-        return redirect()->back()->with('success','User Registration Successful');
+        return redirect()->route('login.registration.form')->with('success','User Registration Successful');
 
     }
 
