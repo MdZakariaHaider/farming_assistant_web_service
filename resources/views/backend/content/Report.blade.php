@@ -1,5 +1,7 @@
 @extends('backend.master')
 @section('orders')
+
+<h1>Report</h1>
 {{-- data table --}}
     <div class="container">
       @if(session()->has('error'))
@@ -11,7 +13,7 @@
 
         <div class="row form-control">
             <form action="{{ route('ReportGenerate') }}" method="get">
-                
+
                 <div class="row">
                     <div class="col-md-4">
                     <H3> From:</h3>
@@ -57,7 +59,7 @@
                             <th scope="col">Quantity</th>
                             <th scope="col">Price</th>
                             <th scope="col">Date</th>
-                                                    
+
                             <th scope="col">User ID</th>
                         </tr>
                     </thead>

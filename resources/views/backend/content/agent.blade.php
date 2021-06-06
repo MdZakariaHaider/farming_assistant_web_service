@@ -2,6 +2,7 @@
 @extends('backend.master')
 @section('orders')
 
+<h1>Agents</h1>
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Create Agent List
@@ -38,7 +39,7 @@
             <td>{{$data->email}}</td>
 
             <td>
-                <a class="btn btn-primary" href="#">View</a>
+                {{-- <a class="btn btn-primary" href="#">View</a> --}}
                 <a class="btn btn-danger" href={{route('agent.delete',$data['id'])}}>Delete</a>
                 <a class="btn btn-success" href="{{route('agent.edit',$data->id)}}">Edit</a>
             </td>

@@ -2,6 +2,8 @@
 @section('orders')
 
 
+
+<h1>Categories</h1>
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Create category List
@@ -34,7 +36,7 @@
 
 
             <td>
-                <a class="btn btn-primary" href="#">View</a>
+                {{-- <a class="btn btn-primary" href="#">View</a> --}}
                 <a class="btn btn-danger" href={{route('category.delete',$data['id'])}}>Delete</a>
                 <a class="btn btn-success" href="{{route('category.edit',$data->id)}}">Edit</a>
             </td>

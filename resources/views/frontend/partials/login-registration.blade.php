@@ -109,7 +109,7 @@
 
 
 <div class="row d-flex align-items-center">
-    <h2  class ="text-center" style="font-family: 'Pattaya', sans-serif; color:rgb(17, 207, 17);">Farming Assistant Web Service <br>User Login</h2>
+    <h1  class ="text-center" style=" color:rgb(17, 207, 17);padding-top:15px">Farming Assistant Web Service <br>User Login</h1>
     <div class="col-md-5 ">
         <img src="https://www.bentoli.com/wp-content/uploads/2017/07/CommercialFarming-1.jpg" class="img-fluid w-100 mx-5" alt="">
     </div>
@@ -117,7 +117,7 @@
 
 
 
-        <form action="{{route('login')}}"  method="POST" class="container w-50 p-5 border shadow p-3 mb-5 rounded-3" style="background: linear-gradient(to right, #619fdd 0%, #a1d8f1 100%); margin-top:100px">
+        <form action="{{route('login')}}"  method="POST" class="container w-50 p-5 border shadow p-3 mb-5 rounded-3" style="background: linear-gradient(to right, #0ae01c 0%, #9ce795 100%); margin-top:100px">
 
 
             @csrf

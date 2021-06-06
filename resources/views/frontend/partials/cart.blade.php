@@ -4,7 +4,7 @@
 
 @section('content')
 <div>
-    <h3 class="text-center mt-5">Product Cart</h3>
+    <h2 style="color: rgb(236, 10, 10)" class="text-center mt-5">Product Cart</h2>
 </div>
 <form action="{{route('orderConfirm')}}" method="post" >
 
@@ -60,7 +60,7 @@
               @endforeach
               <td colspan="7" class="text-center">
 
-Sub-Total:
+                grand-total:
                 {{$total}}
 
                                 </td>
@@ -72,7 +72,9 @@ Sub-Total:
 
 
     <diV>
-        <button  type="submit" >CheckOut</button>
+
+
+        <h4><button style="background-color: rgb(70, 194, 13);   type="submit" >Check Out</button></h4>
       </diV>
 
 </form>

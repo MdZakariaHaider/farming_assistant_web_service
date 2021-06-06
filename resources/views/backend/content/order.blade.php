@@ -2,6 +2,7 @@
 @section('orders')
 
 
+<h1>Orders</h1>
 <table class="table">
     <thead>
       <tr class="fw-bolder" style="color:black">
@@ -11,7 +12,7 @@
         <th scope="col">Product Name</th>
         <th scope="col">Product price</th>
         <th scope="col">Quantity</th>
-        
+
       </tr>
     </thead>
     <tbody>
@@ -25,7 +26,7 @@
             <td>{{$data->user_id}}</td>
             <td>{{$data->product_name}}</td>
             <td>{{$data->product_price}}</td>
-           
+
             <td>{{$data->quantity}}</td>
 
 

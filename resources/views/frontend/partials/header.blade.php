@@ -29,7 +29,7 @@
           @auth()
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-           {{ucfirst(auth()->user()->name)}}
+           <h4>{{ucfirst(auth()->user()->name)}}</h4>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item" href="{{route('profile.show')}}"> Your Profile</a>

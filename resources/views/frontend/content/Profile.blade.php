@@ -7,7 +7,7 @@
 <!------ Include the above in your HEAD tag ---------->
 
             <div class="container " >
-                <div class="jumbotron " style="background: url('/image/bg4.png');">
+                <div class="jumbotron " style="background: url('/image/bg20.png');background-repeat:no-repeat" ;>
                   <div class="row">
                       <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
                           <img src="https://www.svgimages.com/svg-image/s5/man-passportsize-silhouette-icon-256x256.png" alt="stack photo" class="img">
@@ -25,7 +25,7 @@
                         </h2>
                         </div>
                             <hr>
-                            
+
 
                             {{-- <li><p><span class="glyphicon glyphicon-earphone one" style="width:50px;"></span> </p></li> --}}
                            <p>@if (auth()) {{auth()->user()->email}} @endif</p>
@@ -46,13 +46,14 @@
                                 @endif
 
                           <table class="table">
-                          <thead>
+                              <h3> Purchase Products:</h3>
+                          <thead >
                             <tr class="fw-bolder" style="color:black">
-                              {{-- <th scope="col">#</th> --}}
+                              <th scope="col">#</th>
 
-                              {{-- <th scope="col">Product Name</th>
+                            <th scope="col">Product Name</th>
                               <th scope="col">Product price</th>
-                              <th scope="col">Quantity</th> --}}
+                               <th scope="col">Quantity</th>
 
 
                             </tr>
@@ -66,7 +67,7 @@
 
                             <td>{{$data->product_name}}</td>
                             <td>{{$data->product_price}}</td>
-                            <td>{{$data->availableStock}}</td>
+                            <td>{{$data->quantity}}</td>
 
 
 

@@ -3,11 +3,11 @@
 @section('content')
 <div class="" >
 	<div class="row">
-	<div class=" alert-warning bg-warning alert-dismissible" role="alert" >
-  <button  type="button" onclick="this.parentNode.parentNode.removeChild(this.parentNode);" class="close btn btn-info" data-dismiss="alert">Not Interested</button>
-  <strong><i class="fa fa-warning"></i> </strong> 
+	<div style="background-color:gray" class=" alert-warning   alert-dismissible" role="alert" >
+  <button  type="button" onclick="this.parentNode.parentNode.removeChild(this.parentNode);" style="background-color: silver"  class="close btn btn-warning" data-dismiss="alert">Not Interested</button>
+  <strong><i class="fa fa-warning"></i> </strong>
   <marquee>
-  <p style="font-family: Impact; font-size: 18pt">Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor!</p>
+  <h4 style="color: rgb(222, 226, 11)">Welcome to Farming Assistant Web Service.We are here to provide you the best service</h4>
   </marquee>
 </div>
 
@@ -20,14 +20,14 @@
 
 
 
-<section class="bg">
+<section  class="bg">
     <div class=" text-center container bg-clear">
       <div class="row ">
         <div class="col-lg-6 col-md-8 mx-auto">
-
+{{--
           <p>
-            <a href="#" class="btn btn-primary my-2">You can orders from here</a>
-          </p>
+            <a href="#" class="btn btn-dark my-2">You can orders from here</a>
+          </p> --}}
         </div>
       </div>
     </div>

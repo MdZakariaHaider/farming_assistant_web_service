@@ -2,7 +2,7 @@
 @section('orders')
 
 
-
+<h1>Farmers</h1>
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Create Farmer List
@@ -113,7 +113,7 @@
         <td>{{$data->farmer_agent->name}}</td>
 
         <td>
-            <a class="btn btn-primary" href="#">View</a>
+            {{-- <a class="btn btn-primary" href="#">View</a> --}}
             <a class="btn btn-danger" href={{route('farmer.delete',$data['id'])}}>Delete</a>
             <a class="btn btn-success" href="{{route('farmer.edit',$data->id)}}">Edit</a>
         </td>

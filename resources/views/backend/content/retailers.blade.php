@@ -1,6 +1,8 @@
 @extends('backend.master')
 @section('orders')
 
+
+<h1>Whole seller</h1>
 <!-- Button trigger modal -->
 {{-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Create Retailers list
@@ -22,7 +24,7 @@
         <th scope="col">Email</th>
         <th scope="col">Address</th>
         <th scope="col">Contacts</th>
-        <th scope="col">Action</th>
+        {{-- <th scope="col">Action</th> --}}
       </tr>
     </thead>
     <tbody>
@@ -40,9 +42,9 @@
             <td>{{$data->address}}</td>
             <td>{{$data->contact}}</td>
             <td>
-                <a class="btn btn-primary" href="#">View</a>
-                <a class="btn btn-danger" href={{route('retailer.delete',$data['id'])}}>Delete</a>
-                <a class="btn btn-success" href="{{route('retailer.edit',$data->id)}}">Edit</a>
+                {{-- <a class="btn btn-primary" href="#">View</a> --}}
+                {{-- <a class="btn btn-danger" href={{route('retailer.delete',$data['id'])}}>Delete</a> --}}
+                {{-- <a class="btn btn-success" href="{{route('retailer.edit',$data->id)}}">Edit</a> --}}
 
             </td>
           </tr>

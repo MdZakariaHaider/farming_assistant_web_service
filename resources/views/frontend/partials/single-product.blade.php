@@ -14,9 +14,12 @@
   </div>
   @endif
 
+
 <div class="container"  style="padding: 200px">
+
 <div class="card">
     <div class="container-fliud"  >
+
         <div class="wrapper row">
 
             <div class="preview col-md-6">
@@ -32,14 +35,14 @@
             <div class="details col-md-6">
                 <h3 class="product-title">{{$product->name}}</h3>
 
-                <p class="product-description">{{$product->description}}</p>
+                <h3 class="product-description">{{$product->description}}</h3>
                 <h4 class="price"> Price:{{$product->price}}</h4>
 
                 @if($check)
                     <span style="padding: 10px;" class="alert alert-danger">Already sold.</span>
                 @else
                 <div >
-                    <a href="{{route('show.product',$product->id)}}" class="btn btn-sm btn-warning">Buy Now</a>
+                    {{-- <a href="{{route('show.product',$product->id)}}" class="btn btn-sm btn-warning">Buy Now</a> --}}
                     <a href="{{route('addToCart', $product->id)}}" class="btn btn-sm btn-dark">add to cart</a>
 
 
@@ -52,6 +55,7 @@
 </div>
 </div>
 </div>
+
 
 
 

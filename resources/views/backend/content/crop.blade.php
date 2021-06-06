@@ -1,6 +1,8 @@
 @extends('backend.master')
 @section('orders')
 
+
+<h1>Crops</h1>
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Create Crops List
@@ -36,7 +38,7 @@
             <td>{{$data->quantity}}</td>
             <td>{{$data->availability}}</td>
             <td>
-                <a class="btn btn-primary" href="#">View</a>
+                {{-- <a class="btn btn-primary" href="#">View</a> --}}
                 <a class="btn btn-danger" href={{route('crop.delete',$data['id'])}}>Delete</a>
                 <a class="btn btn-success" href="{{route('crop.edit',$data->id)}}">Edit</a>
             </td>

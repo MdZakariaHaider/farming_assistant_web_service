@@ -4,7 +4,7 @@
         <div class="footer-top bg-dark text-light">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-2 col-md-6">
 
                         <!-- Footer Widget -->
                         <div class="footer-widget footer-about">
@@ -13,7 +13,7 @@
                                 <h2 class="text-light">Farming Assistant Web Service</h2>
                             </div>
                             <div class="footer-about-content">
-                                <p>#</p>
+                                <p></p>
 
                             </div>
                         </div>
@@ -21,7 +21,7 @@
 
                     </div>
 
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-7 col-md-6">
 
                         <!-- Footer Widget -->
                         <div class="footer-widget footer-menu">
@@ -33,6 +33,10 @@
                                 <li><a href="booking.html"><i class="fas fa-angle-double-right"></i> Appointment</a></li>
 
                             </ul> --}}
+                        </div>
+                        <div class="footer-about-content">
+                            <p>We are here to serve you the best service.We collect our products directly from the farmer by invest them before.</p>
+
                         </div>
                         <!-- /Footer Widget -->
 
@@ -48,7 +52,7 @@
 
                                 <p>
                                     <i class="fas fa-phone-alt"></i>
-                                    1246
+                                  017458963245
                                 </p>
                                 <p class="mb-0">
                                     <i class="fas fa-envelope"></i>

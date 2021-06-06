@@ -5,10 +5,10 @@
         <div class=" text-center container bg-clear">
             <div class="row ">
                 <div class="col-lg-6 col-md-8 mx-auto">
-                    <h1 class="fw-bolder text-dark">All Products</h1>
-                    <p>
-                        <a href="#" class="btn btn-primary my-2">You can orders from here</a>
-                    </p>
+
+                    {{-- <p>
+                        <a href="#" class="btn btn-dark my-2">You can orders from here</a>
+                    </p> --}}
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 @extends('backend.master')
 @section('orders')
 
-
+<h1>Products</h1>
 
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -128,7 +128,7 @@
             <img style="width:120px; height:80px" src="{{url('files/photo/'.$data->image)}}"alt="Product Image" >
         </td>
         <td>
-            <a class="btn btn-primary" href="#">View</a>
+            {{-- <a class="btn btn-primary" href="#">View</a> --}}
             <a class="btn btn-danger" href={{route('product.delete',$data['id'])}}>Delete</a>
             <a class="btn btn-success" href="{{route('product.edit',$data->id)}}">Edit</a>
         </td>

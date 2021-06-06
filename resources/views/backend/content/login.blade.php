@@ -107,7 +107,7 @@
 
 
 <div class="row d-flex align-items-center">
-    <h2  class ="text-center" style="font-family: 'Pattaya', sans-serif; color:rgb(99, 233, 22);">Farming Assistant Web Service <br>Admin Login</h2>
+    <h1  class ="text-center" style="; color:rgb(99, 233, 22);padding-top:15px">Farming Assistant Web Service <br>Admin Login</h1>
     <div class="col-md-5 ">
         <img src="https://ec.europa.eu/info/sites/default/files/food-farming-fisheries/farming/images/organic-action-plan-image-axis3_555x370.jpg" class="img-fluid w-100 mx-5" alt="">
     </div>
@@ -115,7 +115,7 @@
 
 
 
-        <form action="{{route('admin.dologin')}}"  method="POST" class="container w-50 p-5 border shadow p-3 mb-5 rounded-3" style="background: linear-gradient(to right, #619fdd 0%, #a1d8f1 100%); margin-top:100px">
+        <form action="{{route('admin.dologin')}}"  method="POST" class="container w-50 p-5 border shadow p-3 mb-5 rounded-3" style="background: linear-gradient(to right, #55df06 0%, #8be07f 100%); margin-top:100px">
 
 
             @csrf

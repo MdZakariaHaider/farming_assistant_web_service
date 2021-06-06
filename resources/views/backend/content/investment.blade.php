@@ -2,7 +2,7 @@
 @section('orders')
 
 
-
+<h1>Investments</h1>
 
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -99,7 +99,7 @@
     </thead>
     <tbody>
         @foreach ($investment as $key=>$data )
-        
+
       <tr class='fw-bolder style="color:black'>
         <th scope="row">{{$key+1}}</th>
         <td>{{$data->farmer->name}}</td>
@@ -113,7 +113,7 @@
         <td>{{$data->d_date}}</td>
 
         <td>
-            <a class="btn btn-success" href="#">Pending</a>
+            {{-- <a class="btn btn-success" href="#">Pending</a> --}}
             <a class="btn btn-danger" href={{route('farmer.delete',$data['id'])}}>Delete</a>
             <a class="btn btn-success" href="{{route('investment.edit',$data->id)}}">Edit</a>
         </td>
