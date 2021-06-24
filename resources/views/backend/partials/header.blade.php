@@ -21,7 +21,7 @@
   </button>
   <ul class="navbar-nav px-3">
     <li class="nav-item text-nowrap">
-        <a   class="nav-link" href="{{route('admin.logout')}}"><h5>Sign out</h5></a>
+        <a style="color:red";  class="nav-link" href="{{route('admin.logout')}}"><h5>Sign out</h5></a>
     </li>
 </ul>
 

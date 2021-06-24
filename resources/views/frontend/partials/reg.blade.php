@@ -27,7 +27,7 @@
 
 
 <div class="row d-flex align-items-center">
-    <h1  class ="text-center" style="; color:rgb(16, 165, 28); padding-top:15px">Farming Assistant Web Service <br> User Login</h1>
+    <h1  class ="text-center" style="; color:rgb(16, 165, 28); padding-top:15px">Farming Assistant Web Service <br> User Registration</h1>
     <div class="col-md-5 ">
         <img src="https://images.unsplash.com/photo-1523741543316-beb7fc7023d8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZmFybXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80" class="img-fluid w-100 mx-5" alt="">
     </div>

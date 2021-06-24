@@ -24,7 +24,7 @@
                         <input type="date" class="form-control" name="to_date">
                     </div>
                     <div class="col-md-2">
-                        <button class="btn btn-light" type="submit">Search</button>
+                        <button class="btn btn-warning" type="submit">Search</button>
                     </div>
 
 

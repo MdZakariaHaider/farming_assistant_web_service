@@ -1,6 +1,6 @@
 @extends('frontend.partials.master')
 @section('content')
-
+<section class="bg">
 @if(session()->has('success'))
 
   <div class="alert alert-success mt-4">
@@ -37,6 +37,7 @@
 
                 <h3 class="product-description">{{$product->description}}</h3>
                 <h4 class="price"> Price:{{$product->price}}</h4>
+                <br>
 
                 @if($check)
                     <span style="padding: 10px;" class="alert alert-danger">Already sold.</span>
@@ -57,7 +58,7 @@
 </div>
 
 
-
+</section>
 
 @endsection
 

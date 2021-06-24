@@ -1,6 +1,7 @@
 @extends('frontend.partials.master')
 @section('content')
 
+
 <div class="album py-5 bg-light">
     <div class="container">
 

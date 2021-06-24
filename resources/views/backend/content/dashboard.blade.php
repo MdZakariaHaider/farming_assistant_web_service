@@ -21,7 +21,7 @@
     <div class="col-md-3 ">
         <div class="card bg-primary text-white shadow" style="width: 15rem;height:10rem;">
             <div class="card-body">
-                <h5> <small>Total Retailers</small> </h5>
+                <h5> <small>Total Whole seller</small> </h5>
                <h1>{{ $retailer }}</h1>
             </div>
         </div>

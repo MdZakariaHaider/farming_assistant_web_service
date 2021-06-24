@@ -3,7 +3,7 @@
 @section('content')
 <div class="" >
 	<div class="row">
-	<div style="background-color:gray" class=" alert-warning   alert-dismissible" role="alert" >
+	<div style="background-color:rgb(87, 81, 81)" class=" alert-warning   alert-dismissible" role="alert" >
   <button  type="button" onclick="this.parentNode.parentNode.removeChild(this.parentNode);" style="background-color: silver"  class="close btn btn-warning" data-dismiss="alert">Not Interested</button>
   <strong><i class="fa fa-warning"></i> </strong>
   <marquee>
@@ -20,7 +20,7 @@
 
 
 
-<section  class="bg">
+<section style="background-color: " class="bg">
     <div class=" text-center container bg-clear">
       <div class="row ">
         <div class="col-lg-6 col-md-8 mx-auto">
